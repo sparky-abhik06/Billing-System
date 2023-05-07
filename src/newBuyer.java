@@ -189,7 +189,7 @@ public class newBuyer extends javax.swing.JFrame {
         try{
             Connection con=Connectionprovider.getCon();
             Statement st=con.createStatement();
-            st.executeUpdate("ISERT INTO buyer VALUES('"+name+"','"+contactNo+"','"+email+"','"+address+"','"+gender+"')");
+            st.executeUpdate("INSERT INTO buyer VALUES('"+name+"','"+contactNo+"','"+email+"','"+address+"','"+gender+"')");
             JOptionPane.showMessageDialog(null,"Successfully Updated");
             setVisible(false);
             new newBuyer().setVisible(true);
