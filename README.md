@@ -1,2 +1,2 @@
 # Billing-System
-Billing System with that records Sales, User Details and Stock of Products.
+Billing System with that records Billing, Buyer Details and Stock of Products.
