@@ -4,7 +4,11 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
+<<<<<<< HEAD
       <Point value="[470, 190]"/>
+=======
+      <Point value="[380, 160]"/>
+>>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
     </Property>
     <Property name="undecorated" type="boolean" value="true"/>
   </Properties>
@@ -69,7 +73,11 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+<<<<<<< HEAD
           <AbsoluteConstraints x="10" y="90" width="580" height="280"/>
+=======
+          <AbsoluteConstraints x="14" y="96" width="580" height="270"/>
+>>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
         </Constraint>
       </Constraints>
 
@@ -98,9 +106,12 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
+<<<<<<< HEAD
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="cc" red="cc" type="rgb"/>
         </Property>
+=======
+>>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="12" style="1"/>
         </Property>
@@ -120,9 +131,12 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton2">
       <Properties>
+<<<<<<< HEAD
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="cc" red="cc" type="rgb"/>
         </Property>
+=======
+>>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="12" style="1"/>
         </Property>

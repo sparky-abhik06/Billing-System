@@ -41,7 +41,11 @@ public class buyerDetails extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+<<<<<<< HEAD
         setLocation(new java.awt.Point(470, 190));
+=======
+        setLocation(new java.awt.Point(380, 160));
+>>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
         setUndecorated(true);
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
@@ -70,10 +74,16 @@ public class buyerDetails extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+<<<<<<< HEAD
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 580, 280));
         getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 378, 588, -1));
 
         jButton1.setBackground(new java.awt.Color(204, 204, 204));
+=======
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 96, 580, 270));
+        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 378, 588, -1));
+
+>>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/print.png"))); // NOI18N
         jButton1.setText("Print");
@@ -84,7 +94,10 @@ public class buyerDetails extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 399, -1, -1));
 
+<<<<<<< HEAD
         jButton2.setBackground(new java.awt.Color(204, 204, 204));
+=======
+>>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/close Jframe.png"))); // NOI18N
         jButton2.setText("Close");
