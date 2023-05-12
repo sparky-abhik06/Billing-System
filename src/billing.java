@@ -1,3 +1,11 @@
+import java.sql.*;
+import Project.Connectionprovider;
+import javax.swing.JOptionPane;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import javax.swing.table.DefaultTableModel;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -8,12 +16,19 @@
  * @author adspa
  */
 public class billing extends javax.swing.JFrame {
-
+    public int finalTotal=0;  
     /**
      * Creates new form billing
      */
     public billing() {
         initComponents();
+        SimpleDateFormat dFormat=new SimpleDateFormat("dd-MM-yyyy");
+        Date date=new Date();
+        jLabel5.setText(dFormat.format(date));
+        
+        DateTimeFormatter dtf=DateTimeFormatter.ofPattern("HH:mm:ss");
+        LocalDateTime now=LocalDateTime.now();
+        jLabel6.setText(dtf.format(now));
     }
 
     /**
@@ -120,11 +135,11 @@ public class billing extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("jLabel5");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1005, 15, 49, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1005, 15, 130, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setText("jLabel6");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1005, 57, 49, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1005, 57, 130, -1));
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 114, 1164, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -148,6 +163,11 @@ public class billing extends javax.swing.JFrame {
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(305, 172, 70, -1));
 
         jTextField2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(387, 169, 180, -1));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -223,6 +243,11 @@ public class billing extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add.png"))); // NOI18N
         jButton1.setText("Add");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1066, 296, -1, -1));
         getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 335, 1164, -1));
 
@@ -255,9 +280,19 @@ public class billing extends javax.swing.JFrame {
         getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(691, 524, -1, -1));
 
         jTextField10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField10ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(807, 411, 200, -1));
 
         jTextField11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField11ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(807, 466, 200, -1));
 
         jTextField12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -267,6 +302,11 @@ public class billing extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/save.png"))); // NOI18N
         jButton2.setText("Save");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1053, 408, -1, -1));
 
         jButton3.setBackground(new java.awt.Color(204, 204, 204));
@@ -299,6 +339,28 @@ public class billing extends javax.swing.JFrame {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
+        String name=jTextField1.getText();
+        try
+        {
+            Connection con=Connectionprovider.getCon();
+            Statement st=con.createStatement();
+            ResultSet rs=st.executeQuery("select * from buyer where name like '"+name+"'");
+            if(rs.next())
+            {
+                jTextField1.setText(rs.getString(1));
+                jTextField2.setText(rs.getString(2));
+                jTextField3.setText(rs.getString(3));
+                jTextField4.setText(rs.getString(4));
+            }else
+            {
+                jTextField2.setText("");
+                jTextField3.setText("");
+                jTextField4.setText("");
+            }
+        }catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
@@ -307,6 +369,30 @@ public class billing extends javax.swing.JFrame {
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
         // TODO add your handling code here:
+        String pId=jTextField5.getText();
+        try
+        {
+            Connection con=Connectionprovider.getCon();
+            Statement st=con.createStatement();
+            ResultSet rs=st.executeQuery("select * from product where pId like '"+pId+"'");
+            if(rs.next())
+            {
+//                jTextField5.setText(rs.getString(1));
+                jTextField6.setText(rs.getString(2));
+                jTextField7.setText(rs.getString(3));
+                jTextField8.setText(rs.getString("i"));
+                jTextField9.setText(rs.getString(4));
+            }else
+            {
+                jTextField6.setText("");
+                jTextField7.setText("");
+                jTextField8.setText("");
+                jTextField9.setText("");
+            }
+        }catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
     }//GEN-LAST:event_jTextField5ActionPerformed
 
     private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
@@ -323,6 +409,63 @@ public class billing extends javax.swing.JFrame {
         setVisible(false);
         new billing().setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+        String contactNo=jTextField2.getText();
+        try
+        {
+            Connection con=Connectionprovider.getCon();
+            Statement st=con.createStatement();
+            ResultSet rs=st.executeQuery("select * from buyer where contactNo like '"+contactNo+"'");
+            if(rs.next())
+            {
+                jTextField1.setText(rs.getString(1));
+                jTextField2.setText(rs.getString(2));
+                jTextField3.setText(rs.getString(3));
+                jTextField4.setText(rs.getString(4));
+            }else
+            {
+                jTextField1.setText("");
+                jTextField3.setText("");
+                jTextField4.setText("");
+            }
+        }catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        int price=Integer.parseInt(jTextField7.getText());
+        int quantity=Integer.parseInt(jTextField8.getText());
+        int total=price*quantity;
+        DefaultTableModel model=(DefaultTableModel)jTable2.getModel();
+        model.addRow(new Object[]{jTextField6.getText(),jTextField9.getText(),price,quantity,total});
+        finalTotal+=total;
+        String finalTotal1=String.valueOf(finalTotal);
+        jTextField10.setText(finalTotal1);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jTextField10ActionPerformed
+
+    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+        // TODO add your handling code here:
+        String paidAmount=jTextField11.getText();
+        int z=Integer.parseInt(paidAmount);
+        finalTotal-=z;
+        String finalTotal1=String.valueOf(finalTotal);
+        jTextField12.setText(finalTotal1);
+        jTextField12.setEditable(false);
+    }//GEN-LAST:event_jTextField11ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -263,13 +263,13 @@ public class newProduct extends javax.swing.JFrame {
         {
             Connection con=Connectionprovider.getCon();
             Statement st=con.createStatement();
-            st.executeUpdate("INSERT INTO buyer VALUES('"+pId+"','"+pName+"','"+rate+"','"+description+"','"+availibility+"')");
+            st.executeUpdate("INSERT INTO product VALUES('"+pId+"','"+pName+"','"+rate+"','"+description+"','"+availibility+"')");
             JOptionPane.showMessageDialog(null,"Successfully Updated");
             setVisible(false);
             new newProduct().setVisible(true);
         }catch(Exception e)
         {
-            JOptionPane.showMessageDialog(null, rate);
+            JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -280,7 +280,7 @@ public class newProduct extends javax.swing.JFrame {
             Connection con=Connectionprovider.getCon();
             Statement st=con.createStatement();
             ResultSet rs=st.executeQuery("select max(pId) from product");
-            if(rs.first())
+            if(rs.next())
             {
                 int id=rs.getInt(1);
                 id = id+1;

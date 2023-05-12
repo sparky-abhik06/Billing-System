@@ -85,7 +85,6 @@ public class updateBuyer extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, -1, 30));
         getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 567, -1));
 
@@ -108,79 +107,34 @@ public class updateBuyer extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setText("Gender");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, -1, -1));
-=======
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(422, 101, -1, 21));
-        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 140, 567, -1));
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel4.setText("Name");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, -1, -1));
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel5.setText("Contact No");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, -1, -1));
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel6.setText("Email");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, -1, -1));
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel7.setText("Address");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, -1, -1));
-
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel8.setText("Gender");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, -1, -1));
->>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
 
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 250, -1));
-=======
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 250, -1));
->>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
 
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField3ActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
         getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 250, -1));
-=======
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 250, -1));
->>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
 
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField4ActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
         getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, 250, -1));
-=======
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, 250, -1));
->>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
-
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField5ActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
         getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 250, -1));
         getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 567, 10));
 
         jButton2.setBackground(new java.awt.Color(204, 204, 204));
-=======
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, 250, -1));
-        getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 360, 567, 10));
-
->>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/save.png"))); // NOI18N
         jButton2.setText("Update");
@@ -189,14 +143,9 @@ public class updateBuyer extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, -1, -1));
 
         jButton3.setBackground(new java.awt.Color(204, 204, 204));
-=======
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 390, -1, -1));
-
->>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Reset.png"))); // NOI18N
         jButton3.setText("Reset");
@@ -205,14 +154,9 @@ public class updateBuyer extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 400, -1, -1));
 
         jButton4.setBackground(new java.awt.Color(204, 204, 204));
-=======
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, -1, -1));
-
->>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/close Jframe.png"))); // NOI18N
         jButton4.setText("Close");
@@ -221,22 +165,14 @@ public class updateBuyer extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 400, -1, -1));
-=======
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 390, -1, -1));
->>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
 
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField6ActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
         getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 250, -1));
-=======
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, 250, -1));
->>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/all page background image.png"))); // NOI18N
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, -1));

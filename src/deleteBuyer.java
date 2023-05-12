@@ -1,6 +1,7 @@
 import java.sql.*;
 import Project.Connectionprovider;
 import javax.swing.JOptionPane;
+import java.awt.Color;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -52,14 +53,11 @@ public class deleteBuyer extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-<<<<<<< HEAD
         setLocation(new java.awt.Point(470, 190));
-=======
-        setLocation(new java.awt.Point(380, 160));
->>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
+//        setLocation(new java.awt.Point(380, 160));
+
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Delete buyer ani.gif"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 14, 265, -1));
 
@@ -74,10 +72,7 @@ public class deleteBuyer extends javax.swing.JFrame {
         jTextField1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 110, 200, -1));
 
-<<<<<<< HEAD
         jButton1.setBackground(new java.awt.Color(204, 204, 204));
-=======
->>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/search.png"))); // NOI18N
         jButton1.setText("Search");
@@ -134,11 +129,7 @@ public class deleteBuyer extends javax.swing.JFrame {
         jTextField6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 317, 250, -1));
         getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 350, 576, -1));
-
-<<<<<<< HEAD
         jButton2.setBackground(new java.awt.Color(204, 204, 204));
-=======
->>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/delete.png"))); // NOI18N
         jButton2.setText("Delete");
@@ -149,10 +140,7 @@ public class deleteBuyer extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 383, -1, -1));
 
-<<<<<<< HEAD
         jButton3.setBackground(new java.awt.Color(204, 204, 204));
-=======
->>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Reset.png"))); // NOI18N
         jButton3.setText("Reset");
@@ -163,10 +151,8 @@ public class deleteBuyer extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 383, -1, -1));
 
-<<<<<<< HEAD
         jButton4.setBackground(new java.awt.Color(204, 204, 204));
-=======
->>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
+
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/close Jframe.png"))); // NOI18N
         jButton4.setText("Close");
@@ -177,10 +163,8 @@ public class deleteBuyer extends javax.swing.JFrame {
         });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 383, -1, -1));
 
-<<<<<<< HEAD
         jLabel9.setBackground(new java.awt.Color(204, 204, 204));
-=======
->>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
+
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/all page background image.png"))); // NOI18N
         jLabel9.setText("jLabel9");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, -1));

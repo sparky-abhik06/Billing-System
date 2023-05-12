@@ -78,7 +78,7 @@ public int z=0;
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFocusCycleRoot(false);
-        setLocation(new java.awt.Point(90, 33));
+        setLocation(new java.awt.Point(50, 35));
         setMinimumSize(new java.awt.Dimension(1366, 768));
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
