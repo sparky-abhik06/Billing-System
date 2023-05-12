@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Billing-System
 Here this is a **GUI-based** java project that keeps the record of the followings:
 * **Buyer** details:
@@ -32,5 +31,5 @@ Here this is a **GUI-based** java project that keeps the record of the following
    
 ## Application Details
 There are several pages in this application. Which are: 
->>>>>>> 25f905440c47c1cf014d148c497ee1603cfae753
+
 * **Login page**:
