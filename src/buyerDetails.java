@@ -69,12 +69,11 @@ public class buyerDetails extends javax.swing.JFrame {
             }
         ));
         jScrollPane1.setViewportView(jTable1);
+
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 580, 280));
         getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 378, 588, -1));
 
         jButton1.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 96, 580, 270));
-        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 378, 588, -1));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/print.png"))); // NOI18N
         jButton1.setText("Print");

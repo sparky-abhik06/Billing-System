@@ -162,7 +162,7 @@ public class updateProduct extends javax.swing.JFrame {
         {
             Connection con=Connectionprovider.getCon();
             Statement st=con.createStatement();
-            ResultSet rs=st.executeQuery("select * from product whrere pId='"+pId+"'");
+            ResultSet rs=st.executeQuery("select * from product where pId='"+pId+"'");
             if(rs.next())
             {
                 jTextField2.setText(rs.getString(2));
