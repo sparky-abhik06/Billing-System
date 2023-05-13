@@ -468,7 +468,7 @@ public class billing extends javax.swing.JFrame {
         // TODO add your handling code here:
         String paidAmount=jTextField11.getText();
         int z=Integer.parseInt(paidAmount);
-        finalTotal-=z;
+        finalTotal=z-finalTotal;
         String finalTotal1=String.valueOf(finalTotal);
         jTextField12.setText(finalTotal1);
         jTextField12.setEditable(false);
