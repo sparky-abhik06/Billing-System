@@ -115,6 +115,7 @@ public class billing extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTable2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(190, 183));
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -187,7 +188,7 @@ public class billing extends javax.swing.JFrame {
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 172, -1, -1));
 
         jTextField4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 169, 210, -1));
+        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 169, 190, -1));
         getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 202, 1164, -1));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -237,7 +238,12 @@ public class billing extends javax.swing.JFrame {
         getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(893, 260, -1, -1));
 
         jTextField9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        getContentPane().add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 257, 190, -1));
+        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField9ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 257, 170, -1));
 
         jButton1.setBackground(new java.awt.Color(204, 204, 204));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -259,6 +265,11 @@ public class billing extends javax.swing.JFrame {
                 "Name", "Description", "Rate", "Quantity", "Total"
             }
         ));
+        jTable3.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jTable3ComponentShown(evt);
+            }
+        });
         jScrollPane3.setViewportView(jTable3);
 
         getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 356, 673, 195));
@@ -377,11 +388,11 @@ public class billing extends javax.swing.JFrame {
             ResultSet rs=st.executeQuery("select * from product where pId like '"+pId+"'");
             if(rs.next())
             {
-//                jTextField5.setText(rs.getString(1));
+                jTextField5.setText(rs.getString(1));
                 jTextField6.setText(rs.getString(2));
                 jTextField7.setText(rs.getString(3));
-                jTextField8.setText(rs.getString("i"));
                 jTextField9.setText(rs.getString(4));
+                jTextField8.setText("i");
             }else
             {
                 jTextField6.setText("");
@@ -465,7 +476,21 @@ public class billing extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        String name=jTextField1.getText();
+        String contactNo=jTextField2.getText();
+        String email=jTextField3.getText();
+        String address=jTextField4.getText();
+        String path="C:\\Users\\adspa\\OneDrive\\Documents\\NetBeansProjects\\Billing_Docs";
+//        com.
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField9ActionPerformed
+
+    private void jTable3ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jTable3ComponentShown
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTable3ComponentShown
 
     /**
      * @param args the command line arguments
